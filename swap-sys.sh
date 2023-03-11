@@ -34,7 +34,7 @@ qvm-shutdown $PreFix-sys-firewall
 qvm-create --template $PreFix-sys-firewall --label red --property template_for_dispvms=True --class AppVM $PreFix-sys-firewall-dvm
 
 ## shutdown & pause
-read -n 1 -s -r -p "Poweroff & remove all dependancies on sys-* qubes & press any key to continue ... "
+read -n 1 -s -r -p $'Please manually remove all dependancies on sys-* qubes now.\x0a\x0a*****   To verify the qube(s) in question have no existing dependencies and are free to be deleted ...\x0a*****   Highlight the qube(s) being replaced in Qubes Manager and click the “Delete” button.\x0a*****   If there are existing dependencies, it will tell you what they are.\x0a*****   If not, it will prompt for confirmation of the qube name so, just cancel.\x0a\x0aPress any key to poweroff sys-* qubes & continue  ... '
 
 
 qvm-shutdown sys-usb
