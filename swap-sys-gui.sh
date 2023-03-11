@@ -66,7 +66,7 @@ echo "TemplateVM for sys-firewall created!"
 
 ## shutdown & pause
 #read -n 1 -s -r -p "Poweroff & remove all dependancies on sys-* qubes & press any key to continue ... "
-zenity --warning --ellipsize --text="WARNING:\n\nOld sys-* qubes will be backed up and new one's created ...\n\nPress ctrl+c to cancel now!\n\nOR\n\nPress OK to continue:"
+zenity --warning --ellipsize --text="Please manually remove all dependancies on sys-\* qubes now.\n\nTo verify the qube(s) in question have no existing dependencies and are free to be deleted ...\n\nHighlight the qube(s) being replaced in Qubes Manager and click the Delete button.\nIf there are existing dependencies, it will tell you what they are.\nIf not, it will prompt for confirmation of the qube name so, just cancel.\n\nPress OK to poweroff sys-\* qubes and continue ..." 2>/dev/null
 
 (
 qvm-shutdown sys-usb
